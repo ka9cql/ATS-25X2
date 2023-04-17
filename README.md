@@ -1,6 +1,16 @@
 # ATS-25X2
 My mods to the V.5.3b 17.09.2022 PE0MGB SI4735-Radio-ESP32-Touchscreen-Arduino
 
+
+
+NOTE: See the source code for this note (and more information about where to get this - and other - files/libraries)
+#include <TFT_eSPI.h> // NOTE: *REQUIRES* TFT_eSPI by Bodmer version 2.3.70 - Attempting to upgrade to newer versions causes this
+                      //       build to FAIL (even version 2.4.2 FAILS)
+NOTE
+
+
+
+
 I recently (2023-March) purchased an ATS-25X2 (supposedly "WiFi-enabled") ATS-25X2 radio from Amazon. It came with PE0MGB's 2022-09-17 V.5.3.b firmware running on an ESP32-WROOM-32. It was marketed as a "WiFi-enabled radio". Its WiFi module was hard-coded to the access point "ChinaNet-302" and could not be changed from the front panel. It also did not respond to any prompts over its USB-to-serial port. So I tracked down this firmware and modified it.
 
 This repo contains my mods to the above-mentioned firmware in an effort to better understand it, change its hard-coded WiFi AP setting, and make it at least begin to communicate over the USB-to-serial port about what's going on
