@@ -13,7 +13,7 @@ NOTE
 
 
 
-I recently (2023-March) purchased an ATS-25X2 (supposedly "WiFi-enabled") ATS-25X2 radio from Amazon. It came with PE0MGB's 2022-09-17 V.5.3.b firmware running on an ESP32-WROOM-32. It was marketed as a "WiFi-enabled radio". Its WiFi module was hard-coded to the access point "ChinaNet-302" and could not be changed from the front panel. It also did not respond to any prompts over its USB-to-serial port. So I tracked down this firmware and modified it.
+I recently (2023-March) purchased an ATS-25X2 (supposedly "WiFi-enabled") radio from Amazon. It came with PE0MGB's 2022-09-17 V.5.3.b firmware running on an ESP32-WROOM-32. It was marketed as a "WiFi-enabled radio". Its WiFi module was hard-coded to the access point "ChinaNet-302" and could not be changed from the front panel. It also did not respond to any prompts over its USB-to-serial port. So I tracked down this firmware and modified it.
 
 This repo contains my mods to the above-mentioned firmware in an effort to better understand it, change its hard-coded WiFi AP setting, and make it at least begin to communicate over the USB-to-serial port about what's going on
 
