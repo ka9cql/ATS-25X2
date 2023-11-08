@@ -8,6 +8,10 @@ NOTE: See the source code for this note (and more information about where to get
 #include <TFT_eSPI.h> // NOTE: *REQUIRES* TFT_eSPI by Bodmer version 2.3.70 - Attempting to upgrade to newer versions causes this
           //       build to FAIL (even version 2.4.2 FAILS)
 </pre>
+You can download that specific version of tht TFT_eSPI library from here -
+<pre>
+          https://github.com/Bodmer/TFT_eSPI/tree/2.3.70
+</pre>
 NOTE
 
 
