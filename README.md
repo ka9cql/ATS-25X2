@@ -37,10 +37,10 @@ My intention was to use this protocol to both display the current radio settings
 
 I haven't yet gotten the set-frequency commands going. Right now the radio won't respond to anything you send it.
 
-Another note: If the radio does not connect to WiFi it will tie up the radio, considerably, and make the front dial seem unresponsive.  So your best bet is to ENSURE you connect, and STAY CONNECTED to the WiFi access point that is hard-coded into this firmware.
+Another note: If the radio does not connect to WiFi it will tie up the radio, considerably, and make the front panel and dial seem unresponsive.  So your best bet is to ENSURE that you can connect, and STAY CONNECTED to the WiFi access point that is hard-coded into this firmware.
 
-I will look into making this setting user-configurable, but that is likely quite a way off. In the mean time, I might try to lessen the impact of disconnection from WiFi.
+I will look into making this setting user-configurable, but that is likely quite a ways off. In the mean time, I might try to lessen the impact of the device being disconnected from its hard-coded WiFi access point.
 
-SIDE NOTE: When using an Arduino IDE, set the board to "ESP23 Dev Module", and you should be fine.
+DEVELOPER'S NOTE: When using an Arduino IDE, set the board to "ESP23 Dev Module", and you should be fine. I haven't found anything special about the "WROOM-32" - so far - that this program has issues with. (I will add more notes along the way!)
 
 Cheers!
