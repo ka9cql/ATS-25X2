@@ -12,9 +12,6 @@ You can download that specific version of tht TFT_eSPI library from here -
 <pre>
           https://github.com/Bodmer/TFT_eSPI/tree/2.3.70
 </pre>
-NOTE
-
-
 
 
 In 2023 I purchased a few ATS-25X2 radios from Amazon. They came with PE0MGB's 2022-09-17 V.5.3.b firmware running on an ESP32-WROOM-32. They were marketed as a "WiFi-enabled radio". They technically are, but their WiFi modules were hard-coded to the access point of whichever vendor assembled it ("ChinaNet-302", "CMCC-328", etc.) and this could not be changed from the front panel. This firmware also did not respond to any prompts over the USB (emulated) serial port. So I tracked down the included firmware's source code, and modified it.  That is what you have found (and are reading about), here.
