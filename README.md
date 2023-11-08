@@ -17,17 +17,16 @@ NOTE
 
 
 
-I recently (2023-March) purchased an ATS-25X2 (supposedly "WiFi-enabled") radio from Amazon. It came with PE0MGB's 2022-09-17 V.5.3.b firmware running on an ESP32-WROOM-32. It was marketed as a "WiFi-enabled radio". Its WiFi module was hard-coded to the access point "ChinaNet-302" and could not be changed from the front panel. It also did not respond to any prompts over its USB-to-serial port. So I tracked down this firmware and modified it.
+I purchased (2023-March( an ATS-25X2 (supposedly "WiFi-enabled") radio from Amazon. It came with PE0MGB's 2022-09-17 V.5.3.b firmware running on an ESP32-WROOM-32. It was marketed as a "WiFi-enabled radio". Its WiFi module was hard-coded to the access point "ChinaNet-302" and could not be changed from the front panel. It also did not respond to any prompts over its USB-to-serial port. So I tracked down this firmware and modified it.
 
 This repo contains my mods to the above-mentioned firmware in an effort to better understand it, change its hard-coded WiFi AP setting, and make it at least begin to communicate over the USB-to-serial port about what's going on
 
 This version still has the AP choice hard-coded (I didn't get too far with that part) but at least I started making the device communicate with the USB-to-serial port so you can watch/figure out what the radio is currently listening to
 
-I abandoned this project shortly after doing these initial mods, as I began to better understand the limitations of this radio - chiefly, the lack of 10 meter reception. This caused me to abandon the ATS line of radios in favor of the uBITX line - which has both receive and transmit, plus the missing 10 meter capability.
 
-I wanted to publicly archive this version in case anyone else wanted to take advantage of my mods, and also in the rare case that I may want to pick back up where i left off in the future
+I wanted to publicly archive this version in case anyone else wanted to take advantage of my mods
 
-LIMITATIONS: This version took a shot at deciphering and displaying the currently-tuned frequency and mode. The algorithm displays its best guess, in CSV form, with the following format -
+LIMITATIONS: This version took a shot at deciphering and displaying the currently-tuned frequency and mode at 115200 baud over the USB/emulated serial port. The algorithm displays its best guess, in CSV form, with the following format -
 
 F,14275,M,USB,B,-1000,X,23
 
@@ -39,4 +38,12 @@ where:
 
 My intention was to use this protocol to both display the current radio settings and (eventually, but not implemented yet) control the radio over the USB-to-serial port
 
-I never got that far, as I learned this radio lacked support for the 10 meter US Amateur Radio band
+I haven't yet gotten the set-frequency commands going. Right now the radio won't respond to anything you send it.
+
+Another note: If the radio does not connect to WiFi it will tie up the radio, considerably, and make the front dial seem unresponsive.  So your best bet is to ENSURE you connect, and STAY CONNECTED to the WiFi access point that is hard-coded into this firmware.
+
+I will look into making this setting user-configurable, but that is likely quite a way off. In the mean time, I might try to lessen the impact of disconnection from WiFi.
+
+SIDE NOTE: When using an Arduino IDE, set the board to "ESP23 Dev Module", and you should be fine.
+
+Cheers!
