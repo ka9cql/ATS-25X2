@@ -18,7 +18,7 @@ In 2023 I purchased a few ATS-25X2 radios from Amazon. They came with PE0MGB's 2
 
 This repo contains my mods to the above-mentioned firmware in an effort to better understand it, change its hard-coded WiFi AP setting, and make it at least begin to communicate over the USB-to-serial port about what's going on with the radio.
 
-This version still has the AP choice hard-coded (I didn't get too far with that part) but at least I started making the device communicate with the USB/serial port so you can see out what frequency/mode/etc the radio is currently tuned to.
+This version still has the AP choice hard-coded (I didn't get too far with that part) but at least I started making the device communicate with the USB/serial port so you can see what frequency/mode/etc the radio is currently tuned to.
 
 
 I wanted to make this version public in case anyone else wanted to take advantage of my mods!
